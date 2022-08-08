@@ -13,8 +13,8 @@
 ### 1️⃣ Clone the repository ###
 
 ### 2️⃣ Install dependencies ###
-```shell
 Install these following dependencies if REQUIRED:
+```shell
 1> Spire.Barcode (NuGet Packet)
 2> Zen.Barcode.Core (Nuget Packet)
 3> Framework.dll (./Lib)
