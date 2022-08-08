@@ -1,4 +1,10 @@
-# UPGRADE HR PROGRAM FUNCTION
+<p align="center">
+  <h1 align="center">TECH-LINK ALL-IN-ONE SOFTWARE</h1>
+</p>
+
+:mortar_board: Best in Class modern CV, Resume and Portfolio website template.
+All-in-One-Page site with simple and fully customizable builder.
+`all-in-one` `IT` `template-project` `management`
 
 - Đổi tên các hàng của bảng excel được xuất ra
 
