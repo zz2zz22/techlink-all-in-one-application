@@ -104,7 +104,7 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Framework">
-      <HintPath>..\..\..\temp\Framework.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
@@ -134,7 +134,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="NumberConverterToText">
-      <HintPath>..\..\..\..\Sample\NumberConverterToText\NumberConverterToText\NumberConverterToText\bin\Debug\NumberConverterToText.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\NumberConverterToText.dll</HintPath>
       <Private>True</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
@@ -144,8 +144,8 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Spire.Barcode">
-      <HintPath>..\..\..\..\temp\QRCodeSample\packages\FreeSpire.Barcode.2.3\lib\net40\Spire.Barcode.dll</HintPath>
+    <Reference Include="Spire.Barcode, Version=6.6.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Barcode.6.6.3\lib\net40\Spire.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -169,10 +169,10 @@
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
     <Reference Include="XanderUI">
-      <HintPath>..\..\..\..\Sample\XanderUI-master\XanderUI-master\XanderUI.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\XanderUI.dll</HintPath>
     </Reference>
-    <Reference Include="Zen.Barcode.Core">
-      <HintPath>..\..\..\WareHouse\barcode scanner demo\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Core.2.0.0\lib\net45\Zen.Barcode.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
