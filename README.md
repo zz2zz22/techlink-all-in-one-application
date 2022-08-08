@@ -1,10 +1,31 @@
-# UPGRADE HR PROGRAM FUNCTION
+<p align="center">
+  <h1 align="center">TECH-LINK ALL-IN-ONE SOFTWARE</h1>
+</p>
 
-- Đổi tên các hàng của bảng excel được xuất ra
+🎓 An all-in-one program for multiple purpose (warehouse management, HR management, etc ...).
 
-- Thêm danh sách của Attendance lây MSNV, tên, bộ phân, ca làm, giờ vào, giờ ra. ( phần này công chính thức chưa xuất các thông tin trên 
---> tạo bảng xuất ra )
+`all-in-one` `IT` `template-project` `management`
 
-- Thêm phần chi tiết của bộ phân quản lý trên file Excel đã xuất. 
+---
 
-- Thể hiện chấm công thời vụ khi xuất báo cáo.
+## 🏃 Usage ##
+
+### 1️⃣ Clone the repository ###
+
+### 2️⃣ Install dependencies ###
+Install these following dependencies if REQUIRED:
+```shell
+1> Spire.Barcode (NuGet Packet)
+2> Zen.Barcode.Core (Nuget Packet)
+3> Framework.dll (./Lib)
+4> NumberConverterToText.dll (./Lib)
+5> XanderUI.dll
+```
+
+### 3️⃣ Build ###
+
+### ✅ Setting instruction  ###
+Please download and follow the link bellow:
+```shell
+link
+```
