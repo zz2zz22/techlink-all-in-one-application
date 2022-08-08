@@ -565,7 +565,7 @@ namespace WindowsFormsApplication1
         }
 
         private void btSI_Click(object sender, EventArgs e)
-        {            
+        {
             FI.ShowDialog();
         }
         public void dtgvSetting()
