@@ -11,16 +11,11 @@ namespace WindowsFormsApplication1
             UpdateDTGV();
         }
 
-        private void btClose_Click(object sender, EventArgs e)
-        {
-            Close();
-            //dtgv_Info.Columns.Clear();
-        }
-
         private void FormInfo_Load(object sender, EventArgs e)
         {
             UpdateDTGV();
         }
+
         public void UpdateDTGV()
         {
             string model = SaveData.Model;
@@ -40,6 +35,21 @@ namespace WindowsFormsApplication1
             dtgv_Info.Columns["Inspector"].FillWeight = 100;
             dtgv_Info.Columns["Remark"].FillWeight = 75;
             dtgv_Info.Columns["Serno"].FillWeight = 750;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMinMax_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

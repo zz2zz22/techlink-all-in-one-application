@@ -34,33 +34,9 @@ namespace WindowsFormsApplication1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInfo));
-            this.btClose = new XanderUI.XUIButton();
             this.dtgv_Info = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Info)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btClose
-            // 
-            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btClose.ButtonImage = global::WindowsFormsApplication1.Properties.Resources.close;
-            this.btClose.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btClose.ButtonText = "";
-            this.btClose.ClickBackColor = System.Drawing.Color.Transparent;
-            this.btClose.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btClose.CornerRadius = 5;
-            this.btClose.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btClose.HoverBackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.btClose.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btClose.ImagePosition = XanderUI.XUIButton.imgPosition.Right;
-            this.btClose.Location = new System.Drawing.Point(2320, 0);
-            this.btClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(80, 74);
-            this.btClose.TabIndex = 81;
-            this.btClose.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btClose.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // dtgv_Info
             // 
@@ -83,7 +59,7 @@ namespace WindowsFormsApplication1
             this.dtgv_Info.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12.5F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -100,13 +76,13 @@ namespace WindowsFormsApplication1
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgv_Info.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgv_Info.EnableHeadersVisualStyles = false;
-            this.dtgv_Info.Location = new System.Drawing.Point(0, 80);
+            this.dtgv_Info.Location = new System.Drawing.Point(-1, 0);
             this.dtgv_Info.Margin = new System.Windows.Forms.Padding(0);
             this.dtgv_Info.Name = "dtgv_Info";
             this.dtgv_Info.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -116,7 +92,7 @@ namespace WindowsFormsApplication1
             this.dtgv_Info.RowHeadersWidth = 51;
             this.dtgv_Info.RowTemplate.Height = 50;
             this.dtgv_Info.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgv_Info.Size = new System.Drawing.Size(2400, 744);
+            this.dtgv_Info.Size = new System.Drawing.Size(2382, 1102);
             this.dtgv_Info.TabIndex = 82;
             // 
             // FormInfo
@@ -124,15 +100,13 @@ namespace WindowsFormsApplication1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(2400, 822);
+            this.ClientSize = new System.Drawing.Size(2382, 1055);
             this.Controls.Add(this.dtgv_Info);
-            this.Controls.Add(this.btClose);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormInfo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Form Model Info";
             this.Load += new System.EventHandler(this.FormInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Info)).EndInit();
             this.ResumeLayout(false);
@@ -140,7 +114,6 @@ namespace WindowsFormsApplication1
         }
 
         #endregion
-        private XanderUI.XUIButton btClose;
         private System.Windows.Forms.DataGridView dtgv_Info;
     }
 }
