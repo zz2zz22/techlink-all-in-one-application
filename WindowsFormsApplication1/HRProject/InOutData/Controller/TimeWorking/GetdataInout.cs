@@ -498,7 +498,7 @@ e.ID  in (select distinct EmpID from Kq_Source where 1=1  ");
                 DataTable dt = new DataTable();
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
- select e.Code,e.Name, e.Dept, z.LongName as DeptName, s.FDateTime as DateTime, p.B" + date.Day + " as ShiftCode");
+ select e.Code,e.Name, e.Dept, z.LongName as DeptName, e.Memo as SeasonalDept, s.FDateTime as DateTime, p.B" + date.Day + " as ShiftCode");
                 stringBuilder.Append(" from ZlEmployee e left join ZlDept z on e.Dept = z.Code");
                 stringBuilder.Append(" left join Kq_Source s on e.ID = s.EmpID");
                 stringBuilder.Append(" left join Kq_PaiBan p on e.ID = p.EmpID");
@@ -514,6 +514,10 @@ e.ID  in (select distinct EmpID from Kq_Source where 1=1  ");
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     int shiftCode = Convert.ToInt32(dt.Rows[i]["ShiftCode"].ToString());
+                    if (dt.Rows[i]["Code"].ToString().Contains("TV"))
+                    {
+                        dt.Rows[i]["DeptName"] = dt.Rows[i]["SeasonalDept"].ToString().TrimEnd();
+                    }
                     employeeTimekeepings.Add(new EmployeeTimekeeping
                     {
                         Date = date.ToString("dd.MM.yyyy"),
