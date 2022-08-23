@@ -76,7 +76,9 @@ namespace WindowsFormsApplication1.DailyTarget
         private void dtpDate_ValueChanged(object sender, EventArgs e)
         {
             SaveData.Date = dtpDate.Value.ToString("yyyy-MM-dd");
+            dtpDate.Visible = false;
             updateDtgv();
+            dtpDate.Visible = true;
         }
 
         private void dataChange()
