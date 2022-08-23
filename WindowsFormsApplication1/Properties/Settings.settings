@@ -15,7 +15,7 @@
       <Value Profile="(Default)">20</Value>
     </Setting>
     <Setting Name="IntLayoutMQCColumn" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">3</Value>
+      <Value Profile="(Default)">4</Value>
     </Setting>
     <Setting Name="intLayoutMQCRows" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
