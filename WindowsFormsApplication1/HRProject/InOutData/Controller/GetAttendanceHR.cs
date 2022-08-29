@@ -71,7 +71,7 @@ where   e.State =0 and e.Dept not like '%999%' ");
                 List<EmployeeAttendance> employeeAttendancesDayNotPaiPan = getdataInout.GetEmployeeAttandanceDayShiftNotPaipan(date, IDSession);
                 List<EmployeeAttendance> employeeAttendancesNight = getdataInout.GetEmployeeAttendancesNightShift(date, IDSession);
                 List<EmployeeAttendance> employeeAttendancesSeasonal = getdataInout.GetEmployeeAttendancesSeasonal(date);
-                List<EmployeeAttendance> employeeAttendancesSeasonalNight = getdataInout.GetEmployeeAttendancesSeasonalNight(date);
+                List<EmployeeAttendance> employeeAttendancesSeasonalNight = getdataInout.GetEmployeeAttendancesSeasonalNight(date, IDSession);
                 for (int i = 0; i < dtGetUpCode.Rows.Count; i++)
                 {
                     AttendanceDept attendance = new AttendanceDept();

@@ -130,11 +130,10 @@ e.ID  in (select distinct EmpID from Kq_Source where 1=1 ");
  where  (e.Dept not like '%999%' and e.Dept not like '%888%') and e.State = '0'  and 
 e.ID  in (select distinct EmpID from Kq_Source where 1=1 ");
                 stringBuilder.Append(" and ((cast(FDateTime as date)  = cast( '" + date.ToString("yyyyMMdd") + "' as date ) ");
-                stringBuilder.Append(" and convert(char(5), FDateTime, 108) >='12:00:01'  and convert(char(5), FDateTime, 108) < '23:59:00')   ");
+                stringBuilder.Append(" and convert(char(5), FDateTime, 108) >='12:00:01'  and convert(char(5), FDateTime, 108) < '23:59:59')   ");
                 stringBuilder.Append(" or (cast(FDateTime as date)  = cast( '" + date.AddDays(1).ToString("yyyyMMdd") + "' as date ) ");
-                stringBuilder.Append("  and convert(char(5), FDateTime, 108) >='00:01:00'  and convert(char(5), FDateTime, 108) < '12:00:00')) ");
+                stringBuilder.Append("  and convert(char(5), FDateTime, 108) >='00:00:01'  and convert(char(5), FDateTime, 108) < '12:00:00')) ");
                 stringBuilder.Append(" and EmpID is not null ) ");
-
                 stringBuilder.Append(" and p.B" + date.Day + "  in ('03','07') and p.SessionID = '"+ SessionID + "' ");
                 SqlHR sqlHR = new SqlHR();
                 sqlHR.sqlDataAdapterFillDatatable(stringBuilder.ToString(), ref dt);
@@ -174,7 +173,7 @@ e.ID  in (select distinct EmpID from Kq_Source where 1=1 ");
  where  (e.Dept not like '%999%' and e.Dept not like '%888%') and e.State = '0'  and 
 e.ID  in (select distinct EmpID from Kq_Source where 1=1 ");
                 stringBuilder.Append(" and cast(FDateTime as date)  = cast( '" + date.ToString("yyyyMMdd") + "' as date ) ");
-                stringBuilder.Append(" and convert(char(5), FDateTime, 108) >='00:00:01'  and convert(char(5), FDateTime, 108) < '23:59:00' and EmpID is not null ) ");
+                stringBuilder.Append(" and convert(char(5), FDateTime, 108) >='00:00:01'  and convert(char(5), FDateTime, 108) < '23:59:59' and EmpID is not null ) ");
                 stringBuilder.Append(" and p.B" + date.Day + " not  in ('03','07') and p.SessionID =  '"+ SessionID + "' " );
                 SqlHR sqlHR = new SqlHR();
                 sqlHR.sqlDataAdapterFillDatatable(stringBuilder.ToString(), ref dt);
@@ -199,23 +198,24 @@ e.ID  in (select distinct EmpID from Kq_Source where 1=1 ");
             }
             return employeeAttendances;
         }
-        public List<EmployeeAttendance> GetEmployeeAttendancesSeasonalNight(DateTime date)
+        public List<EmployeeAttendance> GetEmployeeAttendancesSeasonalNight(DateTime date, int SessionID) //Edit by Vu 29/08/2022
         {
             List<EmployeeAttendance> employeeAttendances = new List<EmployeeAttendance>();
             try
             {
                 DataTable dt = new DataTable();
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(@" select distinct  e.Code,e.Name, e.Dept, z.Name as DeptName, z.Manager from ZlEmployee e
+                stringBuilder.Append(@" select distinct  e.Code, e.Memo, e.Name, e.Dept, z.Name as DeptName, z.Manager from ZlEmployee e
  left join ZlDept z on e.Dept = z.Code
   left join Kq_Source s on e.ID = s.EmpID
  where  e.Dept like '%999%'  and 
-e.ID  in (select EmpID from Kq_Source where 1=1
+e.ID  in (select s.EmpID 
+from Kq_Source as s left join Kq_PaiBan as pb on s.EmpID = pb.EmpID where 1=1 
 ");
-                stringBuilder.Append(" and cast(FDateTime as date)  = cast( '" + date.ToString("yyyyMMdd") + "' as date )");
-                stringBuilder.Append("  and convert(char(5), FDateTime, 108) >='18:00:00'  and convert(char(5), FDateTime, 108) < '23:59:00' ) ");
-                stringBuilder.Append("  and e.ID  in (select EmpID from Kq_Source where  cast(FDateTime as date)  = cast( '" + date.AddDays(1).ToString("yyyyMMdd") + "' as date )  ");
-                stringBuilder.Append(" and convert(char(5), FDateTime, 108) >='08:00:00'  and convert(char(5), FDateTime, 108) < '09:00:00' ) ");
+                stringBuilder.Append(" and pb.SessionID = '" + SessionID + "' and pb.B" + date.Day + " in ('03', '07', '17', '18', '20', '21', '23', '24', '37', '31', '32', '33', '34') ");
+                stringBuilder.Append(" and cast(FDateTime as date)  = cast( '" + date.ToString("yyyyMMdd") + "' as date ))");
+                stringBuilder.Append(" and e.ID  in (select EmpID from Kq_Source where  cast(FDateTime as date)  = cast( '" + date.AddDays(1).ToString("yyyyMMdd") + "' as date ) ");
+                stringBuilder.Append(" and convert(char(5), FDateTime, 108) < '09:00:00')");
 
                 SqlHR sqlHR = new SqlHR();
                 sqlHR.sqlDataAdapterFillDatatable(stringBuilder.ToString(), ref dt);
@@ -251,11 +251,11 @@ e.ID  in (select EmpID from Kq_Source where 1=1
  left join ZlDept z on e.Dept = z.Code
  left join Kq_Source s on s.EmpID = e.ID
  where  e.Dept  like '%999%'   and 
- 
+ e.State = '0' and
  e.ID  in (select EmpID from Kq_Source where 1=1
  ");
                 stringBuilder.Append(" and cast(FDateTime as date)  = cast( '" + date.ToString("yyyyMMdd") + "' as date )");
-                stringBuilder.Append("  and convert(char(5), FDateTime, 108) >='00:00:01'  and convert(char(5), FDateTime, 108) < '23:59:00' ) ");
+                stringBuilder.Append("  and convert(char(5), FDateTime, 108) >='07:00:00'  and convert(char(5), FDateTime, 108) < '18:00:00' ) ");
                 stringBuilder.Append("  and cast(FDateTime as date)  = cast( '" + date.ToString("yyyyMMdd") + "' as date )" );
 
                 SqlHR sqlHR = new SqlHR();
