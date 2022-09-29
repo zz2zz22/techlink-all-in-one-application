@@ -1,9 +1,12 @@
-﻿using System;
+﻿using MiniExcelLibs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -269,6 +272,46 @@ namespace WindowsFormsApplication1.DailyTarget
                 }
             }
            
+        }
+
+        //public string tempPath = Directory.GetCurrentDirectory() + @"\Temp.xlsx";
+        public string tempPath = Environment.CurrentDirectory + @"\Resources\Temp.xlsx";
+        public string directPath;
+
+        private void btExport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog dlgSave = new SaveFileDialog())
+                try
+                {
+                    dlgSave.CheckFileExists = false;
+                    // SaveFileDialog title
+                    dlgSave.Title = "Save File";
+                    // Available file extensions
+                    dlgSave.Filter = "Execl files (*.xlsx)|*.xlsx|Execl files (*.xls)|*.xls";
+                    if (dlgSave.ShowDialog() == DialogResult.OK && dlgSave.FileName.Length > 0)
+                    {
+                        string filePath = dlgSave.FileName;
+                        directPath = Path.GetFullPath(filePath);
+                        DataTable temp = GetSOFTdata.getTarget(SaveData.Date);
+                        var value = new Dictionary<string, object>()
+                        {
+                            ["Title1"] = "Mục tiêu mỗi ngày",
+                            ["DailyTarget"] = temp,
+                        };
+                        //MiniExcel.SaveAs(directPath, value, true, "null", ExcelType.XLSX, null, true);
+                        MiniExcel.SaveAsByTemplate(directPath, tempPath, value);
+                        DialogResult dialogResult = MessageBox.Show("The excel file was saved. Would you like to access the file?", "Alert", MessageBoxButtons.OKCancel);
+                        if (dialogResult == DialogResult.OK)
+                        {
+                            Process.Start(directPath);
+                        }
+                    }
+                }
+                catch (Exception errorMsg)
+                {
+                    MessageBox.Show(errorMsg.Message);
+                    //File.Delete(directPath);
+                }
         }
     }
 }
