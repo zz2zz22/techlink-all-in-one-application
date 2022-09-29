@@ -274,8 +274,8 @@ namespace WindowsFormsApplication1.DailyTarget
            
         }
 
-        public string tempPath = Directory.GetCurrentDirectory() + @"\Temp.xlsx";
-        //public string tempPath = Path.Combine(Path.GetFullPath(@"..\..\"), "Resources") + @"\Temp.xlsx";
+        //public string tempPath = Directory.GetCurrentDirectory() + @"\Temp.xlsx";
+        public string tempPath = Environment.CurrentDirectory + @"\Resources\Temp.xlsx";
         public string directPath;
 
         private void btExport_Click(object sender, EventArgs e)
