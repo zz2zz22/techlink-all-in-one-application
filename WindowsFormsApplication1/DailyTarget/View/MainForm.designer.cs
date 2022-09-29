@@ -29,13 +29,12 @@ namespace WindowsFormsApplication1.DailyTarget
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbpnMain = new System.Windows.Forms.TableLayoutPanel();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.dtgvAllModel = new System.Windows.Forms.DataGridView();
             this.btEnter = new XanderUI.XUISuperButton();
             this.dtgvDailyTarget = new System.Windows.Forms.DataGridView();
@@ -59,6 +58,9 @@ namespace WindowsFormsApplication1.DailyTarget
             this.label3 = new System.Windows.Forms.Label();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.lbAllModel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btExport = new XanderUI.XUIButton();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.tbpnMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAllModel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDailyTarget)).BeginInit();
@@ -66,6 +68,7 @@ namespace WindowsFormsApplication1.DailyTarget
             this.tbRightButton.SuspendLayout();
             this.tbpnInfoRight.SuspendLayout();
             this.tbpnInfoLeft.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbpnMain
@@ -74,12 +77,12 @@ namespace WindowsFormsApplication1.DailyTarget
             this.tbpnMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
             this.tbpnMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.tbpnMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
-            this.tbpnMain.Controls.Add(this.dtpDate, 1, 0);
             this.tbpnMain.Controls.Add(this.dtgvAllModel, 0, 1);
             this.tbpnMain.Controls.Add(this.btEnter, 1, 1);
             this.tbpnMain.Controls.Add(this.dtgvDailyTarget, 2, 1);
             this.tbpnMain.Controls.Add(this.tbRight, 2, 0);
             this.tbpnMain.Controls.Add(this.tbpnInfoLeft, 0, 0);
+            this.tbpnMain.Controls.Add(this.panel1, 1, 0);
             this.tbpnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbpnMain.Location = new System.Drawing.Point(0, 0);
             this.tbpnMain.Margin = new System.Windows.Forms.Padding(4);
@@ -87,21 +90,9 @@ namespace WindowsFormsApplication1.DailyTarget
             this.tbpnMain.RowCount = 2;
             this.tbpnMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tbpnMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tbpnMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbpnMain.Size = new System.Drawing.Size(1482, 603);
             this.tbpnMain.TabIndex = 0;
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDate.CalendarFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.dtpDate.Location = new System.Drawing.Point(642, 2);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(20, 2, 20, 2);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(197, 34);
-            this.dtpDate.TabIndex = 0;
-            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // dtgvAllModel
             // 
@@ -114,24 +105,24 @@ namespace WindowsFormsApplication1.DailyTarget
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvAllModel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvAllModel.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAllModel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvAllModel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvAllModel.ColumnHeadersHeight = 40;
             this.dtgvAllModel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvAllModel.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvAllModel.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvAllModel.EnableHeadersVisualStyles = false;
             this.dtgvAllModel.GridColor = System.Drawing.Color.Black;
             this.dtgvAllModel.Location = new System.Drawing.Point(1, 181);
@@ -143,7 +134,7 @@ namespace WindowsFormsApplication1.DailyTarget
             this.dtgvAllModel.RowTemplate.Height = 30;
             this.dtgvAllModel.Size = new System.Drawing.Size(620, 421);
             this.dtgvAllModel.TabIndex = 1;
-            this.dtgvAllModel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvAllModel_CellClick);
+            this.dtgvAllModel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvAllModel_CellClick);
             // 
             // btEnter
             // 
@@ -182,24 +173,24 @@ namespace WindowsFormsApplication1.DailyTarget
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvDailyTarget.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDailyTarget.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDailyTarget.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDailyTarget.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvDailyTarget.ColumnHeadersHeight = 40;
             this.dtgvDailyTarget.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvDailyTarget.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvDailyTarget.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvDailyTarget.EnableHeadersVisualStyles = false;
             this.dtgvDailyTarget.GridColor = System.Drawing.Color.Black;
             this.dtgvDailyTarget.Location = new System.Drawing.Point(860, 181);
@@ -211,7 +202,7 @@ namespace WindowsFormsApplication1.DailyTarget
             this.dtgvDailyTarget.RowTemplate.Height = 30;
             this.dtgvDailyTarget.Size = new System.Drawing.Size(621, 421);
             this.dtgvDailyTarget.TabIndex = 3;
-            this.dtgvDailyTarget.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDailyTarget_CellClick);
+            this.dtgvDailyTarget.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDailyTarget_CellClick);
             // 
             // tbRight
             // 
@@ -519,6 +510,55 @@ namespace WindowsFormsApplication1.DailyTarget
             this.lbAllModel.Text = "...";
             this.lbAllModel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btExport);
+            this.panel1.Controls.Add(this.dtpDate);
+            this.panel1.Location = new System.Drawing.Point(622, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(237, 180);
+            this.panel1.TabIndex = 7;
+            // 
+            // btExport
+            // 
+            this.btExport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btExport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btExport.ButtonImage = global::WindowsFormsApplication1.Properties.Resources.Excel_32;
+            this.btExport.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btExport.ButtonText = "Export Excel";
+            this.btExport.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btExport.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.CornerRadius = 5;
+            this.btExport.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btExport.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btExport.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btExport.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btExport.Location = new System.Drawing.Point(37, 61);
+            this.btExport.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.btExport.Name = "btExport";
+            this.btExport.Size = new System.Drawing.Size(163, 68);
+            this.btExport.TabIndex = 87;
+            this.btExport.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btExport.Click += new System.EventHandler(this.btExport_Click);
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDate.CalendarFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.dtpDate.Location = new System.Drawing.Point(17, 2);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(20, 2, 20, 2);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(203, 34);
+            this.dtpDate.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -542,6 +582,7 @@ namespace WindowsFormsApplication1.DailyTarget
             this.tbpnInfoRight.PerformLayout();
             this.tbpnInfoLeft.ResumeLayout(false);
             this.tbpnInfoLeft.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -554,7 +595,6 @@ namespace WindowsFormsApplication1.DailyTarget
         private System.Windows.Forms.DataGridView dtgvDailyTarget;
         private XanderUI.XUIButton btFix;
         private XanderUI.XUIButton btDelete;
-        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.TableLayoutPanel tbRight;
         private System.Windows.Forms.TableLayoutPanel tbRightButton;
         private System.Windows.Forms.TableLayoutPanel tbpnInfoLeft;
@@ -573,5 +613,8 @@ namespace WindowsFormsApplication1.DailyTarget
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Label lbAllModel;
+        private System.Windows.Forms.Panel panel1;
+        private XanderUI.XUIButton btExport;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }
