@@ -29,7 +29,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.html</WebPage>
-    <ApplicationRevision>181</ApplicationRevision>
+    <ApplicationRevision>184</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -1351,6 +1351,7 @@
     <EmbeddedResource Include="WMS\View\TransferMaterialUI.resx">
       <DependentUpon>TransferMaterialUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Resources\Temp.xlsx" />
     <None Include="BXLLAPI_x64.lib">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

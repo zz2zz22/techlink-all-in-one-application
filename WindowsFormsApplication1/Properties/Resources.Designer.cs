@@ -1033,6 +1033,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        public static byte[] Temp {
+            get {
+                object obj = ResourceManager.GetObject("Temp", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         public static byte[] Template_MQC {
             get {
                 object obj = ResourceManager.GetObject("Template_MQC", resourceCulture);
